@@ -270,3 +270,8 @@ label {
 .btn.btn-outline:hover {
     color: #FFF
 }
+
+.heading {
+    color:white;
+    margin-top: 80px;
+}
