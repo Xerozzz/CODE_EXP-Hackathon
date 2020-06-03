@@ -302,6 +302,7 @@
     flex-direction: column;
     margin-right: 40px;
   }
+
   nav .header {
     display: flex;
     justify-content: space-between;
