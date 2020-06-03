@@ -72,3 +72,18 @@ app.post('api/counsellor',function(req,res){
         }
     })
 })
+
+//Adding Notes
+app.post('api/notes',function(req,res){
+    var userid = req.body.userid
+    var content = req.body.content
+    api.newCounsellor(userid,content,function(err,result){
+        if(!err){
+            console.log(result)
+            res.send(result + ' record inserted')
+        }
+        else{
+            res.send(err.statusCode)
+        }
+    })
+})

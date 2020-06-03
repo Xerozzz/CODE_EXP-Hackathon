@@ -91,7 +91,7 @@ var database = {
             }
             else{
                 console.log("Connected!")
-                var sql = "Insert into counsellors(username,fullname,organization,password) values(?,?,?,?)"
+                var sql = "Insert into counsellors(username,fullname,password,organization,) values(?,?,?,?)"
                 conn.query(sql,[username,fullname,password,organization], function (err,result){
                     conn.end()
                     if (err){
@@ -106,6 +106,30 @@ var database = {
             }
         })
     },
+    //Adding a new counsellor
+    newCounsellor: function(userid,content,callback){
+        var conn = db.getConnection()
+        conn.connect(function (err){
+            if (err){
+                console.log(err)
+            }
+            else{
+                console.log("Connected!")
+                var sql = "Insert into notes(userid,content) values(?,?)"
+                conn.query(sql,[userid,content], function (err,result){
+                    conn.end()
+                    if (err){
+                        console.log(err)
+                        return callback (err,null)
+                    }
+                    else {
+                        console.log(result.affectedRows);
+                        return callback(null,result.affectedRows)
+                    }
+                })
+            }
+        })
+    }
 }
 
 module.exports = database
