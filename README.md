@@ -24,3 +24,10 @@ The feature of a guest login allows a user to easily access a counsellor without
 After a consultation, the guest user has the option to create an account, which will allow us to better cater to him in the future. With a registered account, counsellors can write notes about each user, this will allow them to identify the same user in the future, or have an easier hand off to another counsellor without going back to square one.
 
 Counsellors on this platform will be qualified and from collaborating organizations such as Samaritans of Singapore.
+## APIs and technologies used to create this
+- Javascript
+- HTML/CSS
+- Bootstrap
+- Cordova
+- MySQL
+- Android Studio
