@@ -87,3 +87,5 @@ app.post('api/notes',function(req,res){
         }
     })
 })
+
+module.exports = app
