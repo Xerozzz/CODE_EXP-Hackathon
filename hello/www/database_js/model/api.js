@@ -115,7 +115,7 @@ var database = {
             }
             else{
                 console.log("Connected!")
-                var sql = "Insert into counsellors(userid,content) values(?,?,?,?)"
+                var sql = "Insert into notes(userid,content) values(?,?)"
                 conn.query(sql,[userid,content], function (err,result){
                     conn.end()
                     if (err){
