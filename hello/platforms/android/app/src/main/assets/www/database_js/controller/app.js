@@ -1,14 +1,9 @@
 //Load express library
 var express = require('express');
 
-//Load express-session
-// var session = require('express-session')
-
 //Create an instance of express
 var app = express();
 var api = require('../model/api.js');
-
-var path = require("path");
 
 //Usage of body-parser to parse HTTP POST Data
 var bodyParser = require('body-parser')
@@ -16,30 +11,13 @@ var urlendcodedParser = bodyParser.urlencoded({extended:false})
 app.use(bodyParser.json()) //Parse application/json
 app.use(urlendcodedParser) //Parse application/x-www-form-urlencoded
 
-// app.use(session({
-// 	secret: 'secret',
-// 	resave: true,
-// 	saveUninitialized: true
-// }));
-
 //API calls
-app.get('/login', function(req, res){
-    res.status(200).send('login.html', { root: '../' });
-});
-
 //To return user information
 app.get('/api/user/:username',function (req,res){
-    var username = req.body.username
+    var username = req.params.username
     api.getUser(username, function(err,result){
         if (!err){
-            if (result.length > 0) {
-				req.session.loggedin = true;
-				req.session.username = username;
-				res.redirect('/home');
-			} else {
-				res.send('Incorrect Username and/or Password!');
-			}			
-			res.end();
+            res.send(result)
         }
         else{
             res.status(500).send("Some Error")
