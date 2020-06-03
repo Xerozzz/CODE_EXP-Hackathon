@@ -233,3 +233,41 @@ label {
 .loginbttm {
     padding: 0px;
 }
+
+.demo-preview {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align:center;
+    width:800px;
+    margin:100px auto;
+}
+
+.demo-preview .btn {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.btn {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 120px
+}
+
+.btn.btn-outline {
+    background: 0 0
+}
+
+
+.btn-outline.btn-default {
+    border-color: #B0BEC5;
+    color: #B0BEC5
+}
+
+.btn-outline.btn-default:hover {
+    background-color: #B0BEC5;
+    border-color: #B0BEC5;
+}
+.btn.btn-outline:hover {
+    color: #FFF
+}
