@@ -33,7 +33,7 @@
     filter: blur(0.5px);
     -webkit-filter: blur(0.5px);
     transition: opacity 200ms, blur 200ms;
-    user-drag: none;
+    -webkit-user-drag: none;
     -webkit-user-drag: none;
   }
   .shill:hover {
