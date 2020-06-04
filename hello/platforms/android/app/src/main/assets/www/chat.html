@@ -1,0 +1,67 @@
+<html lang="en"><link type="text/css" id="dark-mode" rel="stylesheet" href=""><style type="text/css" id="dark-mode-custom-style"></style><head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>App</title>
+    <link href="/images/logo.png" rel="icon" type="image/png">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!--[if lt IE 9]> <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script> <![endif]-->
+    <style>
+      .well {
+        margin-top: 35px;
+      }
+
+    </style>
+  </head>
+  <body data-gr-c-s-loaded="true" >
+    <div class="container-fluid">
+      <div class="row" style="background-color: #222d32">
+        <div class="col-md-6 col-md-offset-3 well">
+          <!-- <a href="/index.html">Change Settings</a> -->
+          <a class="btn btn-info " href="/index.html">
+            <i class="fa fa-cog"></i>
+            Settings</a>
+          <h1 class="room-title text-center">Session 1</h1>
+
+          <ul class="messages list-group">
+            <!-- messages would be shown here -->
+          <li class="list-group-item" style="background-color:#dfe6e9;"><strong>9:45 pm System</strong><p>Welcome to Chat Appliction !</p></li><li class="list-group-item" style="background-color:#dfe6e9;"><strong>9:46 pm Counsellor</strong><p class="mymessages">Hi how are you feeling today</p></li><li class="list-group-item" style="background-color:#dfe6e9;"><strong>9:46 pm Counsellor</strong><p class="mymessages">Have there been anything that is worth noting?</p></li><li class="list-group-item" style="background-color:#dfe6e9;"><strong>9:46 pm System</strong><p>Counsellor has joined</p></li><li class="list-group-item" style="background-color:#dfe6e9;"><strong>9:46 pm Counsellor</strong><p>hi</p></li><li class="list-group-item" style="background-color:#dfe6e9;"><strong>9:47 pm Counsellor</strong><p>I have encountered a bad situation just now</p></li></ul>
+
+          <form id="messageForm">
+            <div class="form-group">
+              <i class="fa fa-check-circle msg-read" id="icon-type"></i>
+              <p class="help-block typing"></p>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-comment"></i>
+                </span>
+                <input autofocus="" class="form-control" id="messagebox" name="message" type="text" value="">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input class="btn btn-default btn-block" type="submit">
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <script src="/js/QueryParams.js"></script>
+    <script src="/js/app.js"></script>
+
+  
+
+</body></html>
